@@ -8,8 +8,13 @@ import mapIllustration from "@/assets/map-illustration.png";
 import IssueMap from "@/components/IssueMap";
 import IssueReportForm from "@/components/IssueReportForm";
 import IssuesFeed from "@/components/IssuesFeed";
+import ReportIssueDialog from "@/components/ReportIssueDialog";
 
 const Index = () => {
+  const scrollToMap = () => {
+    document.getElementById('city-map')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -33,11 +38,18 @@ const Index = () => {
               Empowering citizens and civic authorities to create cleaner, safer cities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Camera className="mr-2 h-5 w-5" />
-                Report an Issue
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
+              <ReportIssueDialog>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Camera className="mr-2 h-5 w-5" />
+                  Report an Issue
+                </Button>
+              </ReportIssueDialog>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
+                onClick={scrollToMap}
+              >
                 <MapPin className="mr-2 h-5 w-5" />
                 View City Map
               </Button>
@@ -86,7 +98,7 @@ const Index = () => {
       </section>
 
       {/* Live Map Section */}
-      <section className="py-16">
+      <section id="city-map" className="py-16 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Live City Issues Map</h2>
@@ -140,9 +152,11 @@ const Index = () => {
           <p className="text-lg mb-8 text-white/90">
             Join thousands of citizens creating cleaner, safer urban spaces
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-            Get Started Now
-          </Button>
+          <ReportIssueDialog>
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              Get Started Now
+            </Button>
+          </ReportIssueDialog>
         </div>
       </section>
 

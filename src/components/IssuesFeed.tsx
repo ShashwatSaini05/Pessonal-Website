@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, ThumbsUp, MessageSquare, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const mockIssues = [
   {
@@ -58,6 +60,36 @@ const getStatusLabel = (status: string) => {
 };
 
 const IssuesFeed = () => {
+  const { toast } = useToast();
+  const [upvotedIssues, setUpvotedIssues] = useState<Set<number>>(new Set());
+
+  const handleUpvote = (issueId: number) => {
+    if (upvotedIssues.has(issueId)) {
+      setUpvotedIssues(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(issueId);
+        return newSet;
+      });
+      toast({
+        title: "Upvote removed",
+        description: "Your upvote has been removed from this issue.",
+      });
+    } else {
+      setUpvotedIssues(prev => new Set(prev).add(issueId));
+      toast({
+        title: "Issue upvoted",
+        description: "Thank you for verifying this issue!",
+      });
+    }
+  };
+
+  const handleComment = (issueId: number) => {
+    toast({
+      title: "Comments",
+      description: "Comment feature coming soon. Stay tuned!",
+    });
+  };
+
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {mockIssues.map((issue) => (
@@ -83,11 +115,19 @@ const IssuesFeed = () => {
             
             <div className="flex items-center justify-between pt-2 border-t">
               <div className="flex gap-4 text-sm text-muted-foreground">
-                <button className="flex items-center gap-1 hover:text-primary transition-colors">
-                  <ThumbsUp className="h-4 w-4" />
-                  <span>{issue.upvotes}</span>
+                <button 
+                  onClick={() => handleUpvote(issue.id)}
+                  className={`flex items-center gap-1 hover:text-primary transition-colors ${
+                    upvotedIssues.has(issue.id) ? 'text-primary' : ''
+                  }`}
+                >
+                  <ThumbsUp className={`h-4 w-4 ${upvotedIssues.has(issue.id) ? 'fill-current' : ''}`} />
+                  <span>{issue.upvotes + (upvotedIssues.has(issue.id) ? 1 : 0)}</span>
                 </button>
-                <button className="flex items-center gap-1 hover:text-primary transition-colors">
+                <button 
+                  onClick={() => handleComment(issue.id)}
+                  className="flex items-center gap-1 hover:text-primary transition-colors"
+                >
                   <MessageSquare className="h-4 w-4" />
                   <span>{issue.comments}</span>
                 </button>
