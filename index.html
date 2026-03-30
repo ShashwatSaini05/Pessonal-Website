@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashwat Saini</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Google Fonts: Premium Outfit, Playfair Display, and Bitcount Grid Double Ink -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome styling for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+    <!-- Fluid Animated Background Mesh -->
+    <div class="bg-mesh">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SHASHWAT</a>
+
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content wrapper -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">Shashwat Saini</h1>
+                <h2 class="hero-subtitle">I'm a <span id="typed-text"></span><span class="cursor"></span></h2>
+                <p class="hero-desc">Bridging the gap between beautiful aesthetics and complex technical requirements.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#resume" class="btn btn-primary">Download Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down-icon" aria-label="Scroll Down">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-right">About Me</h2>
+
+                <div class="about-grid">
+                    <div class="about-image-wrapper" data-aos="fade-right" data-aos-delay="100">
+                        <div class="about-image glass-card">
+                            <img src="img2.jpeg" alt="Shashwat Saini"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                        </div>
+                    </div>
+
+                    <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="highlight-text">Passionate Technologist & Developer</h3>
+                        <p>Hello! I'm Shashwat Saini, a tech enthusiast and currently pursuing my B.Tech in Computer
+                            Science and Engineering. I have a profound passion for technology, coding, and continuous
+                            learning.</p>
+                        <p>My core interests lie in creating seamless digital experiences. From exploring the basics of
+                            Artificial Intelligence to building sophisticated web applications, I thrive on solving
+                            complex problems effectively.</p>
+
+                        <div class="interests">
+                            <span class="interest-tag glass-badge"><i class="fa-solid fa-code"></i> Web
+                                Development</span>
+                            <span class="interest-tag glass-badge"><i class="fa-solid fa-brain"></i> AI / ML</span>
+                            <span class="interest-tag glass-badge"><i class="fa-solid fa-puzzle-piece"></i> Problem
+                                Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date highlight-accent">Current</span>
+                            <h3 class="timeline-degree">B.Tech in Computer Science & Engineering (2nd Year)</h3>
+                            <p class="timeline-university"><i class="fa-solid fa-building-columns"></i> COER University
+                            </p>
+                            <p class="timeline-desc">Specializing in core computer science subjects, algorithms,
+                                programming, and software engineering methodologies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date highlight-accent">Completed</span>
+                            <h3 class="timeline-degree">Intermediate & Highschool</h3>
+                            <p class="timeline-university"><i class="fa-solid fa-school"></i> Greenway Modern Senior
+                                Secondary School, Roorkee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Technical Arsenal</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-html5 skill-icon highlight-accent"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-database skill-icon highlight-accent"></i>
+                            <h3>Backend & Databases</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Relational Data</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-python skill-icon highlight-accent"></i>
+                            <h3>Languages & Others</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">AI / ML Basics</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume section">
+            <div class="container text-center">
+                <div class="resume-card glass-card" data-aos="fade-up">
+                    <div class="resume-content">
+                        <h2>Curriculum Vitae</h2>
+                        <p>Want to dig deeper into my experience and academic background? Grab a copy of my resume to
+                            get the full picture.</p>
+                    </div>
+                    <div class="resume-action">
+                        <a href="resume.pdf" class="btn btn-primary btn-large" download>
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Get In Touch</h2>
+
+                <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info glass-card">
+                        <h3>Contact Info</h3>
+                        <p class="contact-subtitle">I'm currently available for networking and collaboration. Reach out
+                            anytime!</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="method-text">
+                                    <h4>Email Me</h4>
+                                    <a href="mailto:shashwatsaini0001@gmail.com">shashwatsaini0001@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="icon-box"><i class="fa-brands fa-linkedin"></i></div>
+                                <div class="method-text">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/shashwat-saini/"
+                                        target="https://www.linkedin.com/in/shashwat-saini/">Connect on LinkedIn</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+                                <div class="method-text">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/ShashwatSaini05"
+                                        target="https://github.com/ShashwatSaini05">Explore my Repos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper glass-card">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group row">
+                                <div class="input-field">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Name@example.com" required>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="How can I help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                Send Message <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center glass-blur">
+            <p>&copy; <span id="year"></span> Shashwat Saini. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top glass-card" aria-label="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Application Script Libraries -->
+
+    <!-- Typed.js for smooth typewriter text effects -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- AOS for Animate On Scroll sequences -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom interactivity scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
