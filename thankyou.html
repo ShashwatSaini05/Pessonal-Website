@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Shashwat Saini</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome styling for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS Base -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Inbuilt specific CSS for Thank You Page -->
+    <style>
+        .thank-you-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .thank-you-card {
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .success-icon {
+            font-size: 5rem;
+            color: #10b981; /* Green success color */
+            margin-bottom: 20px;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        .thank-you-title {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .thank-you-text {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Fluid Animated Background Mesh -->
+    <div class="bg-mesh">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="thank-you-wrapper">
+            <div class="glass-card thank-you-card">
+                <i class="fa-regular fa-circle-check success-icon"></i>
+                <h1 class="thank-you-title highlight-accent">Thank You!</h1>
+                <p class="thank-you-text">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+                
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Include script for theme behavior -->
+    <script>
+        // Check localStorage for saved theme to apply immediately on thank you page
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) {
+            document.body.setAttribute('data-theme', savedTheme);
+        }
+    </script>
+</body>
+</html>
